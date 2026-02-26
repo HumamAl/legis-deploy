@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import {
   ChevronDown,
   ChevronUp,
@@ -327,9 +327,8 @@ export default function DeploymentsPage() {
                   const hasFailure = dep.status === "Failed" || dep.status === "Crashed";
 
                   return (
-                    <>
+                    <React.Fragment key={dep.id}>
                       <TableRow
-                        key={dep.id}
                         className={cn(
                           "hover:bg-[color:var(--surface-hover)] transition-colors duration-75 border-b border-border/50 cursor-pointer",
                           hasFailure && "bg-destructive/4 hover:bg-destructive/6",
@@ -481,7 +480,7 @@ export default function DeploymentsPage() {
                           </TableCell>
                         </TableRow>
                       )}
-                    </>
+                    </React.Fragment>
                   );
                 })
               )}

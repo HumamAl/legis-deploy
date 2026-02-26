@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { Search, Eye, EyeOff, AlertCircle, CheckCircle2, Info } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -207,9 +207,8 @@ export default function EnvConfigPage() {
                   const displayVal = getDisplayValue(v.key, v.value);
 
                   return (
-                    <>
+                    <React.Fragment key={v.key}>
                       <TableRow
-                        key={v.key}
                         className={cn(
                           "hover:bg-[color:var(--surface-hover)] transition-colors duration-75 border-b border-border/50",
                           v.status === "Missing" && "bg-destructive/4"
@@ -287,7 +286,7 @@ export default function EnvConfigPage() {
                           )}
                         </TableCell>
                       </TableRow>
-                    </>
+                    </React.Fragment>
                   );
                 })
               )}
