@@ -786,6 +786,25 @@
    ============================================================ */
 @layer components {
 
+  /* ── Staggered card reveal animation ─────────────────────────
+     Used by dashboard KPI cards: fade in + slight upward slide.
+     Apply .animate-fade-up-in + inline animationDelay on each card. */
+  @keyframes fade-up-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-up-in {
+    animation-name: fade-up-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+
   /* ── .linear-card / .aesthetic-card ─────────────────────────
      Primary card surface. Token-driven — adapts to any aesthetic.
      .linear-card is kept as an alias for backward compatibility.
