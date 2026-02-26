@@ -102,13 +102,12 @@
   --surface-active: oklch(0.94 0 0);
 
   /* ── Primary Color ───────────────────────────────────────────
-     !! OVERRIDE REQUIRED — Layout Builder must replace --primary and
-        --primary-h with domain-appropriate oklch values.
-        See references/design-system.md for the 14-domain color table.
-        QA rejects builds where --primary stays oklch(0.205 0 0). !! */
-  --primary: oklch(0.205 0 0);
+     AESTHETIC: data-dense / DOMAIN: tech / DevOps monitoring
+     Indigo — oklch(0.52 0.14 260) — professional restraint,
+     reads as "deployment tooling" (Railway/Vercel visual language). */
+  --primary: oklch(0.52 0.14 260);
   --primary-foreground: oklch(0.985 0 0);
-  --primary-h: 270; /* Integer hue extracted from --primary */
+  --primary-h: 260; /* Integer hue extracted from --primary */
 
   /* ── Derived Color Tokens ────────────────────────────────── */
   --section-dark: oklch(0.10 0.02 var(--primary-h));
@@ -116,7 +115,7 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: oklch(0.55 0.10 260);
   --accent-foreground: oklch(0.205 0 0);
 
   /* ── Semantic Colors ─────────────────────────────────────── */
@@ -129,27 +128,28 @@
   /* ── Borders & Inputs ────────────────────────────────────── */
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --ring: oklch(0.52 0.14 260);
 
   /* ── Chart Colors ────────────────────────────────────────────
-     Layout Builder harmonizes to primary hue. See design-system.md. */
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+     Harmonized to primary hue (260 = indigo).
+     chart-2 = success green (healthy/active), chart-3 = warning amber (in-progress).
+     chart-4 = violet (complements indigo), chart-5 = blue (adjacent hue). */
+  --chart-1: oklch(0.52 0.14 260);
+  --chart-2: oklch(0.62 0.19 149);
+  --chart-3: oklch(0.75 0.18 85);
+  --chart-4: oklch(0.58 0.12 290);
+  --chart-5: oklch(0.60 0.15 230);
 
   /* ── Sidebar Colors ──────────────────────────────────────────
-     After color override: --sidebar-primary and --sidebar-ring
-     should match --primary.                                     */
+     --sidebar-primary and --sidebar-ring match --primary.      */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary: oklch(0.52 0.14 260);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-ring: oklch(0.52 0.14 260);
 
   /* ── Surface / Card Tokens ───────────────────────────────────
      Driven by [data-theme] aesthetic — not overridden per domain.

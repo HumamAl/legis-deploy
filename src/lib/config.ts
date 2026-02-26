@@ -16,7 +16,7 @@ export type AestheticProfile =
   | "nature-wellness"      // Green, calm, generous space, anti-anxiety pacing
   | "data-dense"           // Compact, monospace metrics, max info per pixel
   | "saas-modern"          // Friendly gradients, approachable, conversion-focused
-  | "e-commerce"           // Product-first, clean, conversion-optimized
+  | "e-commerce"           // Product-first, conversion-optimized
   | "brand-forward"        // Personality-driven, expressive, soft neo-brutalism
   | "retrofuturism";       // Chrome, neon, dark canvas, high-energy iridescent
 
@@ -44,9 +44,9 @@ export type AestheticProfile =
 //   web3 / crypto        → dark-premium | retrofuturism
 
 export const APP_CONFIG = {
-  appName: "App Name",                       // Display name (sidebar header, page title)
-  projectName: "Project Name",               // Client's product name (tab bar microtext, footer)
-  clientName: null as string | null,         // Client first name, or null — never render "null"
-  domain: "tech",                            // Domain (finance, health, marketplace, tech, etc.)
-  aesthetic: "linear" as AestheticProfile,   // Drives data-theme="..." on <html>
+  appName: "LegisDeploy",                              // Display name (sidebar header, page title)
+  projectName: "Legislative Platform Deployment",      // Client's product name (tab bar microtext, footer)
+  clientName: null as string | null,                   // Client first name, or null — never render "null"
+  domain: "tech",                                      // Domain (finance, health, marketplace, tech, etc.)
+  aesthetic: "data-dense" as AestheticProfile,         // Drives data-theme="..." on <html>
 } as const;
