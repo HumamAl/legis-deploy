@@ -4,7 +4,7 @@
 
 **Q1: Which hosting platform you'd recommend for this use case and why**
 
-Railway — your repo already includes railway.toml and runs as a single Express process with SQLite, which maps cleanly to Railway's single-service model with a persistent volume for DATABASE_PATH. Render is a solid fallback. Demo showing the verification workflow: {VERCEL_URL}.
+Railway — your repo already includes railway.toml and runs as a single Express process with SQLite, which maps cleanly to Railway's single-service model with a persistent volume for DATABASE_PATH. Render is a solid fallback. Demo showing the verification workflow: https://legis-deploy.vercel.app.
 
 ---
 

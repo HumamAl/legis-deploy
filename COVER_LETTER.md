@@ -2,7 +2,7 @@ Hi,
 
 Your railway.toml is in the repo — the risk is env var propagation and DATABASE_PATH on the persistent volume.
 
-Built a verification dashboard showing my approach: {VERCEL_URL}
+Built a verification dashboard showing my approach: https://legis-deploy.vercel.app
 
 The demo covers env var config, npm run setup log, and health checks for all four verification points.
 
